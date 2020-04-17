@@ -1,0 +1,83 @@
+<html>
+	<title>EDREAS</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="descripion" content=""/>
+		<meta name="keywords" content="شعر , عکس , تصویر"/>
+		<meta name="copyright" content="Copyright (C) 2018 picsher.ir"/>	
+		<link rel="shortcut icon" href="icon.ico" type="favicon" >
+		<style type="text/css">
+			td.pic:hover {
+				background-color: blue;
+			} 
+		</style>
+		<script	language="javascript" type="text/javascript">
+			mypic=new Array("5.jpg" , "1.jpg" , "2.jpg" , "3.jpg" , "4.jpg");
+			var q=-1;
+			imgct=mypic.lenght;
+			function choosePic() {
+				if(q==-1){
+					var x=mypic[0];
+					for(j=0;j<=3;j++){
+					mypic[j]=mypic[j+1];		
+					}
+					mypic[4]=x;					
+					document.getElementById("1").src=mypic[1];
+					document.getElementById("2").src=mypic[2];
+					document.getElementById("3").src=mypic[3];
+				}
+				if(q==1){
+					var y=mypic[4];
+					for(i=4;i>=1;i--){			
+					mypic[i]=mypic[i-1];		
+					}
+					mypic[0]=y;					
+					document.getElementById("1").src=mypic[1];
+					document.getElementById("2").src=mypic[2];
+					document.getElementById("3").src=mypic[3];
+					q=-1;
+				}
+			}
+			setInterval(choosePic, 3000);
+		</script>
+	</head>
+	<body dir="rtl" bgcolor="#AAA139">
+		<table align="center">	
+			<tr bgcolor="#74276D">
+			  <td align="center" height="100" width="950"><img src="header.png" height="100" width="950" align="center"></td>			 	
+			</tr>
+		</table >
+		<table border="0" align="center" cellspacing="20" cellpadding="">
+			<tr>
+			<td width="50" align="center"><img id="r" width="100" height="100" src="r1.png" 
+			onMouseOut="document.getElementById('r').src='r1.png'" 
+			onMouseOver="document.getElementById('r').src='r2.png'" 
+			onClick="q=-1;choosePic()"
+			>
+			</td>
+			<td bgcolor="#363377" width="90"  align="center"><img  id="1" width="200" height="200" src="1.jpg"></td>
+			<td bgcolor="#363377" width="90"  align="center"><img  id="2" width="200" height="200" src="2.jpg"></td>
+			<td bgcolor="#363377" width="90"  align="center"><img  id="3" width="200" height="200" src="3.jpg"></td>
+			<td width="50" align="center"><img id="l" width="100" height="100" src="l1.png"
+			onMouseOut="document.getElementById('l').src='l1.png'" 
+			onMouseOver="document.getElementById('l').src='l2.png'" 
+			onClick="q=1; choosePic();"
+			>
+			</td>
+			</tr>
+		</table>
+		<br></br>
+		<table  border="0" align="center" cellspacing="20" cellpadding="60">
+			<tr>
+				<td  class="pic" bgcolor="#363377" width="90" align="center"><a style="text-decoration:none;color: silver;" href="aeme.html">ائمه اطهار</a> </td>
+				<td  class="pic" bgcolor="#363377" width="90" align="center"><a style="text-decoration:none;color: silver;" href="shaer.html">شاعران</a></td>
+				<td  class="pic" bgcolor="#363377" width="90" align="center"><a style="text-decoration:none;color: silver;" href="archive.html">آرشیو عکس ها</a></td>
+				</tr>
+		</table>
+		<table align="center">	
+			<tr bgcolor="#74276D">
+			  <td align="center" height="100" width="950"><img src="footer.png" align="center" height="100" width="950"></td>			 	
+			</tr>
+		</table>
+	</body>
+</html>
